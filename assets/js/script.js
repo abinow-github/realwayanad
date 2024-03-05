@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
       var navbar = document.querySelector('.navbar');
       var scrollY = window.scrollY;
       
-      if (scrollY > 150) {
+      if (scrollY > 100) {
           navbar.classList.add('scrolled');
       } else {
           navbar.classList.remove('scrolled');
@@ -16,4 +16,12 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+
+////navbar nav button 
+function showNav(){
+    let toggler=document.getElementById('navbar-toggler')
+    let nav=document.getElementById('navbarNavDropdown')
+    toggler.classList.toggle('show');
+    nav.classList.toggle('show');
+}
   

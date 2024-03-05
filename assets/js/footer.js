@@ -6,4 +6,4 @@ function includeHTML(file, elementId) {
       });
   }
   includeHTML('footer.html', 'footer');
-  includeHTML('header.html', 'header');
+  includeHTML('navbar.html', 'navbar');

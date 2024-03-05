@@ -11,9 +11,13 @@
     font-family: "Ubuntu", sans-serif;
 }
 /* ...................... common styles END ...................... */
-.section-1,.section-2,.section-3,.section-4,.section-5,.section-6{
+.section-1,.section-2,.section-3,.section-4,.section-5,.section-6,.abt-section-1,.abt-section-2,.abt-section-3{
     padding: 50px 0;
     position: relative;
+}
+.p{
+    color: #222020;
+    font-size: large;
 }
 /* animations */
   @keyframes flip-vertical-right {/* animation: flip-vertical-right 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both; */
@@ -53,7 +57,7 @@ header .navbar{
         z-index: 1;
     }
     img{
-        height: 100px;
+        height: 90px;
     }
     .navbar-collapse{
         justify-content: flex-end;
@@ -228,22 +232,26 @@ header .navbar.scrolled::before{
 /* ...................................... banner ................................ */
 header .banner{
     width: 100%;
-    height: 100vh;
-    background: url(../img/banner/banner1.jpg);
+    height: 50vh;
+    background: url(../img/banner/banner2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
     .caption-div{
         text-align: center;
         h1{
             font-weight: bolder;
             color: white;
             font-size: 4rem;
-    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #973434d7, 0 3px 0 #97343480, 0 4px 0 #973434, 0 50px 30px rgba(0, 0, 0, 0.3);
+         text-shadow: 0 1px 0 #cccccc, 0 2px 0 #973434d7, 0 3px 0 #97343480, 0 4px 0 #973434, 0 50px 30px rgba(0, 0, 0, 0.3);
+            z-index: 99;
+            position: relative;
         }
         h2{
             text-transform: capitalize;
@@ -251,147 +259,16 @@ header .banner{
         }
     }
 }
-/* ...................................... banner END ................................ */
-
-/* ...................................... section-1 about................................ */
-.section-1{
+header .banner::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100vh;
-    padding: 100px 0;
-    height: 600px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    .about-img{
-        height: 500px;
-        right: -20%;
-        position: absolute;
-        top: 50px;
-
-    }
-    h3{
-        color: #4e4341b8;
-        font-size: 2rem;
-        letter-spacing: 2px;
-    }
+    height: 100%;
+    background-color: #865e565e;
 }
-/* ...................................... section-1 about END ................................ */
-
-/* ...................................... section-2 properties ................................ */
-.section-2{
-    padding: 100px 0;
-    .card{
-        width: 100%;
-        border-radius: 0;
-        overflow: hidden;
-        border: 0;
-        .img-div{
-            width: 100%;
-            height: 300px;
-            position: relative;
-        }
-        .card-img{
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            z-index: 0;
-            object-fit: cover;
-
-        }
-        .card-body{
-            border: 0;
-            .card-title{
-                color: #2d2827b5;
-                font-size: 20px;
-                font-weight: bold;
-            }
-            .card-price{
-                color: rgb(61, 220, 61);
-                font-size: 20px;
-                font-weight: bold;
-            }
-            .card-txt{
-                color: #7f7776;
-            }
-        }
-        .card-footer{
-            background: transparent;
-            border: 0;
-            display: flex;
-            justify-content: space-between;
-            .name{
-                text-transform: capitalize;
-            }
-            .share{
-                border: 0;
-                background-color: transparent;
-                color: rgb(2 2 81 / 76%);
-                font-size: 20px;
-            }
-        }
-    }
-    .btn-view-all-div{
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-top: 20px;
-    }
-    .btn-view-all{
-        padding: 10px 15px;
-        background: white;
-        text-decoration: none;
-        text-transform: capitalize;
-        color: #f12f0aa6;
-        font-weight: bold;
-        font-size: 20px;
-        border: 2px solid #f12f0aa6;
-        transition: 0.4s;
-    }
-    .btn-view-all:hover{
-        color: white;
-        background: #f12f0aa6;
-        border: 2px solid white;
-
-    }
-}
-/* ...................................... section-2 properties END ................................ */
-
-
-/* ...................................... section-3 features ................................ */
-.section-3{
-  padding: 50px 0;
-  .row{
-    padding: 20px 0px;
-  }
-  .card{
-    text-align: center;
-    padding: 60px 20px;
-    border: 0;
-    box-shadow: 0 0 2px 1px #0000007a;
-    border-radius: 0;
-    color: white;
-    position: relative;
-    .card-title{
-      font-size: 35px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: var(--primary-color);
-      font-weight: bold;
-    }
-    p{
-      color: black;
-    }
-  }
-  .row:nth-child(odd){
-    padding-left: 30px;
-  }
-  .row:nth-child(even){
-    justify-content: flex-end;
-    padding-right: 30px;
-  }
-}
-/* ...................................... section-3 features END ................................ */
+/* ...................................... banner END ................................ */
 
 
 
@@ -479,7 +356,7 @@ body {
     font-weight: bolder;
   }
   input:focus {
-    outline: none;
+    outline: none;              
   }
   input::-moz-placeholder {
     color: var(--dark);
@@ -502,9 +379,6 @@ body {
   .footer_copyright {
     color: var(--light);
   }
-}
-footer .layout_item.txt{
-  width: 50%;
 }
 
 @media (min-width: 675px) {
