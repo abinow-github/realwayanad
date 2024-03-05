@@ -59,13 +59,15 @@ header .navbar{
         justify-content: flex-end;
     }
     .navbar-nav{
-        width: 60%;
+        width: 85%;
+    }
+    .nav-item{
+      padding: 0 30px;
     }
     .nav-item .nav-link{
         font-weight: bold;
         color: rgb(255, 255, 255);
-    }.nav-item .nav-link:hover{
-      color: rgb(255, 255, 255);
+        letter-spacing: 2px;
     }
     
     .dropdown-menu{
