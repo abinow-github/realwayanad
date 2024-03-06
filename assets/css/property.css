@@ -387,10 +387,11 @@ height: 100%;
     h1{
         color: var(--primary-color);
         font-weight: bold;
+        font-size: 25px;
     }
 }
 .price{
-    font-size: 3rem;
+    font-size: 20px;
     color: rgb(24, 161, 24);
     font-weight: bold;
 }
