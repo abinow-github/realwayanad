@@ -24,4 +24,14 @@ function showNav(){
     toggler.classList.toggle('show');
     nav.classList.toggle('show');
 }
+
+/////lord icon hover effect, not sure it works
+document.addEventListener("DOMContentLoaded", function() {
+    var listItem = document.getElementById('listItem');
+    var lordIcon = document.getElementById('lordIcon');
+
+    // Trigger mouseover event
+    var event = new Event('mouseover');
+    lordIcon.dispatchEvent(event);
+});
   

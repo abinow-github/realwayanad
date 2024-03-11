@@ -21,6 +21,12 @@
 
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- lordicon -->
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+
+    <!-- aos library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 </head>
 <style>
   .nav-link.home{
@@ -52,9 +58,9 @@
                       Properties
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <li><a class="dropdown-item" href="properties/villa">Villa</a></li>
-                      <li><a class="dropdown-item" href="properties/apprtment">Small Plot</a></li>
-                      <li><a class="dropdown-item" href="#">House</a></li>
+                      <li><a class="dropdown-item" href="properties">Villa</a></li>
+                      <li><a class="dropdown-item" href="properties">Small Plot</a></li>
+                      <li><a class="dropdown-item" href="properties">House</a></li>
                     </ul>
                   </li>
                   <li class="nav-item">
@@ -83,7 +89,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8">
-            <h3>
+            <h3 data-aos="fade-up" data-aos-duration="1000">
               Welcome to Real Wayanad, where your dream home is just a step away! Established in 2019, we are pleased to be a significant player in Wayanad's thriving real estate sector. As your trusted partner in property solutions, we stand out for our commitment to excellence, code of conduct, and customized service.
             </h3>
           </div>
@@ -94,67 +100,143 @@
 <!-- ............ section-1 about us END ............ -->
     
 <!-- ............ section-2 properties............ -->
-    <section class="section-2">
-      <div class="container">
-        <div class="row">
+<section class="section-2">
+  <div class="container">
+    <div class="row card-sliderr">
+      <section class="section-1-2 scr-anime logo-sldr col-lg-12 mt-4">
+        <section class="property-slider">
 
-          <div class="col-md-6 col-lg-4 col-10">
-            <div class="card">
-              <div class="img-div">
-                <img src="WhatsApp-Image-2023-06-19-at-12.42.44-PM-525x328.jpeg" alt="" srcset="" class="card-img">
-              </div>
-              <div class="card-body">
-                <div class="card-title">Plot For Sale Near Kenichira Town</div>
-                <div class="card-price">₹ 94.35 Lakhs</div>
-                <div class="card-txt"><p class="p">37 cent plot for sale in Kenichira ,North facing plot ,Tarring road frontage ,Electricity</p></div>
-              </div>
-              <div class="card-footer">
-                <div class="name">qwert</div>
-                <button class="share"><i class="fa-solid fa-share-nodes"></i></button>
+  
+ 
+
+        <div class="slide">
+          <div class="card" onclick="window.location.href='property'">
+            <div class="img-div"><img src="test-img-4.jpg" alt=""> <div class="place"><i class="fa-solid fa-location-dot"></i> Wayanad</div></div>
+            <div class="card-body">
+              <div class="popertie-name">3 plots for sale</div>
+              <div class="price">1.50/cent</div>
+              <p class="description">
+                3 plots for sale each plot 15 cents, location sulthan bathery kenichira pulpally road asking price 1.50 per cent, negotiable
+              </p>
+              <a href="" class="share"><lord-icon
+                src="https://cdn.lordicon.com/boyoxams.json"
+                trigger="hover"
+                style="width:90%;height:90%">
+            </lord-icon></a>
+            </div>
+            <div class="card-footer">
+              <div class="name">unknown</div>
+              <div class="buttons">
+                <a href="" class="call">Call Now</a>
               </div>
             </div>
           </div>
-
-          <div class="col-md-6 col-lg-4 col-10">
-            <div class="card">
-              <div class="img-div">
-                <img src="WhatsApp-Image-2023-06-19-at-12.42.44-PM-525x328.jpeg" alt="" srcset="" class="card-img">
-              </div>
-              <div class="card-body">
-                <div class="card-title">Plot For Sale Near Kenichira Town</div>
-                <div class="card-price">₹ 94.35 Lakhs</div>
-                <div class="card-txt"><p class="p">37 cent plot for sale in Kenichira ,North facing plot ,Tarring road frontage ,Electricity</p></div>
-              </div>
-              <div class="card-footer">
-                <div class="name">qwert</div>
-                <button class="share"><i class="fa-solid fa-share-nodes"></i></button>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 col-10">
-            <div class="card">
-              <div class="img-div">
-                <img src="WhatsApp-Image-2023-06-19-at-12.42.44-PM-525x328.jpeg" alt="" srcset="" class="card-img">
-              </div>
-              <div class="card-body">
-                <div class="card-title">Plot For Sale Near Kenichira Town</div>
-                <div class="card-price">₹ 94.35 Lakhs</div>
-                <div class="card-txt"><p class="p">37 cent plot for sale in Kenichira ,North facing plot ,Tarring road frontage ,Electricity</p></div>
-              </div>
-              <div class="card-footer">
-                <div class="name">qwert</div>
-                <button class="share"><i class="fa-solid fa-share-nodes"></i></button>
-              </div>
-            </div>
-          </div>
-
         </div>
-        <div class="btn-view-all-div">
-          <a href="" class="btn-view-all">view all properties</a>
+
+        <div class="slide">
+          <div class="card" onclick="window.location.href='property'">
+            <div class="img-div"><img src="test-img-5.jpg" alt=""> <div class="place"><i class="fa-solid fa-location-dot"></i> Wayanad</div></div>
+            <div class="card-body">
+              <div class="popertie-name">3 plots for sale</div>
+              <div class="price">1.50/cent</div>
+              <p class="description">
+                3 plots for sale each plot 15 cents, location sulthan bathery kenichira pulpally road asking price 1.50 per cent, negotiable
+              </p>
+              <a href="" class="share"><lord-icon
+                src="https://cdn.lordicon.com/boyoxams.json"
+                trigger="hover"
+                style="width:90%;height:90%">
+            </lord-icon></a>
+            </div>
+            <div class="card-footer">
+              <div class="name">unknown</div>
+              <div class="buttons">
+                <a href="" class="call">Call Now</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+
+        <div class="slide">
+          <div class="card" onclick="window.location.href='property'">
+            <div class="img-div"><img src="test-img-4.jpg" alt=""> <div class="place"><i class="fa-solid fa-location-dot"></i> Wayanad</div></div>
+            <div class="card-body">
+              <div class="popertie-name">3 plots for sale</div>
+              <div class="price">1.50/cent</div>
+              <p class="description">
+                3 plots for sale each plot 15 cents, location sulthan bathery kenichira pulpally road asking price 1.50 per cent, negotiable
+              </p>
+              <a href="" class="share"><lord-icon
+                src="https://cdn.lordicon.com/boyoxams.json"
+                trigger="hover"
+                style="width:90%;height:90%">
+            </lord-icon></a>
+            </div>
+            <div class="card-footer">
+              <div class="name">unknown</div>
+              <div class="buttons">
+                <a href="" class="call">Call Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="card" onclick="window.location.href='property'">
+            <div class="img-div"><img src="test-img-3.jpg" alt=""> <div class="place"><i class="fa-solid fa-location-dot"></i> Wayanad</div></div>
+            <div class="card-body">
+              <div class="popertie-name">3 plots for sale</div>
+              <div class="price">1.50/cent</div>
+              <p class="description">
+                3 plots for sale each plot 15 cents, location sulthan bathery kenichira pulpally road asking price 1.50 per cent, negotiable
+              </p>
+              <a href="" class="share"><lord-icon
+                src="https://cdn.lordicon.com/boyoxams.json"
+                trigger="hover"
+                style="width:90%;height:90%">
+            </lord-icon></a>
+            </div>
+            <div class="card-footer">
+              <div class="name">unknown</div>
+              <div class="buttons">
+                <a href="" class="call">Call Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="card" onclick="window.location.href='property'">
+            <div class="img-div"><img src="test-img-2.jpg" alt=""> <div class="place"><i class="fa-solid fa-location-dot"></i> Wayanad</div></div>
+            <div class="card-body">
+              <div class="popertie-name">3 plots for sale</div>
+              <div class="price">1.50/cent</div>
+              <p class="description">
+                3 plots for sale each plot 15 cents, location sulthan bathery kenichira pulpally road asking price 1.50 per cent, negotiable
+              </p>
+              <a href="" class="share"><lord-icon
+                src="https://cdn.lordicon.com/boyoxams.json"
+                trigger="hover"
+                style="width:90%;height:90%">
+            </lord-icon></a>
+            </div>
+            <div class="card-footer">
+              <div class="name">unknown</div>
+              <div class="buttons">
+                <a href="" class="call">Call Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+        
+             </section>
     </section>
+    </div>
+  </div>
+  <div class="dark-layer"></div>
+</section>
 <!-- ............ section-2 properties ............ -->
     
 <!-- ............ section-3 features............ -->
@@ -207,109 +289,15 @@
 
     </div>
     </section>
+    <!-- aos -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+   AOS.init();
+  </script>
 <!-- ............ section-3 features ............ -->
 
 <!-- footer -->
-<footer class="footer"> 
-
-  <div class="container">
-    <div class="footer_inner">
-      <div class="c-footer">
-        <div class="layout">
-          <div class="layout_item txt">
-            <div class="newsletter">
-              <h3 class="newsletter_title mx-auto">Invest in Tomorrow, Live for Today  Your Real Estate Journey Starts Here.</h3>
-            </div>
-          </div>
-
-          <div class="layout_item w-25">
-            <nav class="c-nav-tool">
-              <h4 class="c-nav-tool_title">Menu</h4>
-              <ul class="c-nav-tool_list">
-                <li>
-                  <a href="home" class="c-link">Home</a>
-                </li>
-
-                <li>
-                  <a href="about" class="c-link">About Us</a>
-                </li>
-
-                <li>
-                  <a href="contact" class="c-link">Contact</a>
-                </li>
-              </ul>
-            </nav>
-
-          </div>
-
-          <div class="layout_item w-25">
-            <nav class="c-nav-tool">
-              <h4 class="c-nav-tool_title">Propertes</h4>
-              <ul class="c-nav-tool_list">
-
-                <li class="c-nav-tool_item">
-                  <a href="/pages/shipping-returns" class="c-link">Sell</a>
-                </li>
-
-                <li class="c-nav-tool_item">
-                  <a href="/pages/help" class="c-link">Buy</a>
-                </li>
-
-                
-
-                
-              </ul>
-            </nav>
-
-          </div>
-        </div>
-        <div class="layout c-2">
-          <div class="layout_item w-50">
-            <div class="footer_copyright">
-              <!-- <p> Powerd by iberrtech</p> -->
-            </div>
-          </div>
-          <div class="layout_item w-25">
-            <ul class="flex">
-              <li>
-                <a href="#">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32">
-                    <path fill="none" d="M0 0h24v24H0z" />
-                    <path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z" />
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32">
-                    <path fill="none" d="M0 0h24v24H0z" />
-                    <path d="M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814 11.874 11.874 0 0 1-8.62-4.37 4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101 4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732 11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z" />
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32">
-                    <path fill="none" d="M0 0h24v24H0z" />
-                    <path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.25a1.25 1.25 0 0 0-2.5 0 1.25 1.25 0 0 0 2.5 0zM12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6z" />
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="layout_item w-25" style="display:flex;justify-content: end;align-items: center;">
-            <a href="#hdr">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36">
-              <path fill="none" d="M0 0h24v24H0z" />
-              <path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm1 10h3l-4-4-4 4h3v4h2v-4z" />
-            </svg>
-          </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-  </div>
+<footer class="footer" id="footer"> 
 </footer>
 <!-- foooter END -->
 
@@ -317,7 +305,38 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <!-- Then include Slick slider script -->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+       //////speciality slider
+$(document).ready(function(){
+    $('.property-slider').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 1
+            }
+        }]
+    });
+  });
+    </script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/footer.js"></script>
+    
+  <!-- animate on card -->
+  <script>
+    testung
+  </script>
     <!-- bootstrap 5 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>

@@ -47,7 +47,7 @@
 
 /* ...................................... navbar ................................ */
 header .navbar{
-    background: transparent;
+    background: white;
     position: fixed;
     top: 0;
     width: 100%;
@@ -74,9 +74,7 @@ header .navbar{
     }
     .nav-item .nav-link{
         font-weight: bold;
-        color: rgb(255, 255, 255);
-    }.nav-item .nav-link:hover{
-      color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
     }
     
     .dropdown-menu{
@@ -314,7 +312,7 @@ width: 100%;
 }
 @media screen and (max-width:992px) {
 .carousel,.item,.active {
-  height: 600px;
+  height: 500px;
 }
 
 .carousel-caption{
@@ -341,7 +339,7 @@ height: 100%;
 
 @media screen and (max-width:765px) {
 .carousel,.item,.active {
-  height: 600px;
+  height: 300px;
 }
 .carousel{
 .carousel-inner {

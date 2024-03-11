@@ -79,8 +79,8 @@ if (isset($_SESSION['upload_error'])) {
 <div class="contents" style="margin-top: 100px;">
     <div class="side-menu" style="position: fixed;">
         <ul>
-            <li class="active"><a href="../villa"><img src="../../assets/img/icons/dropdown/battery.png" alt="">Villa</a></li>
-            <li><a href="../small plot"><img src="../../assets/img/icons/dropdown/filters.png" alt="">small plot</a></li>
+            <li><a href="../villa"><img src="../../assets/img/icons/dropdown/battery.png" alt="">Villa</a></li>
+            <li class="active"><a href="../small plot"><img src="../../assets/img/icons/dropdown/filters.png" alt="">small plot</a></li>
             <li><a href="../house"><img src="../../assets/img/icons/dropdown/filters.png" alt="">house</a></li>
         </ul>
     </div>
