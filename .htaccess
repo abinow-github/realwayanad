@@ -1,13 +1,15 @@
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^home$ index.html [L]
+RewriteRule ^home$ index.php [L]
 RewriteRule ^about$ about.html [L]
 RewriteRule ^contact-us$ contact.html [L]
 
-RewriteRule ^properties/villa$ properties.html [L]
-RewriteRule ^properties/small-plot$ properties.html [L]
-RewriteRule ^properties/house$ properties.html [L]
+RewriteRule ^properties/villa$ properties.php [L]
+RewriteRule ^properties/small-plot$ properties.php [L]
+RewriteRule ^properties/house$ properties.php [L]
 
-RewriteRule ^properties/villa$ property.html [L]
-RewriteRule ^property$ property.html [L]
+RewriteRule ^properties/villa/([^/]+)/? property.php?url=$1 [L,QSA]
+RewriteRule ^properties/house/([^/]+)/? property.php?url=$1 [L,QSA]
+RewriteRule ^properties/small-plot/([^/]+)/? property.php?url=$1 [L,QSA]
+RewriteRule ^properties/small_plot/([^/]+)/? property.php?url=$1 [L,QSA]
