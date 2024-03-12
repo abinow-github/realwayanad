@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -108,131 +111,138 @@
 
   
  
+        <?php
+        include('dashboard/root/db.php');
+        $table ='villa';
+        $sql ="SELECT * FROM  $table ORDER BY id DESC";
+              $result =$mysqli->query($sql);
+              if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                $imageFilenames = explode(',', $row['images']);
+                $firstImage = trim($imageFilenames[0]);
+                $imagePath = "dashboard/gallery/$table/" . $firstImage;
+        ?>
 
         <div class="slide">
-          <div class="card" onclick="window.location.href='property'">
-            <div class="img-div"><img src="test-img-4.jpg" alt=""> <div class="place"><i class="fa-solid fa-location-dot"></i> Wayanad</div></div>
+          <div class="card" onclick="window.location.href='properties/<?php echo $table; ?>/<?php echo $row['url']; ?>'">
+            <div class="img-div"><img src="<?php echo $imagePath; ?>" alt=""> <div class="place"><i class="fa-solid fa-location-dot"></i> <?php echo $row['place']; ?></div></div>
             <div class="card-body">
-              <div class="popertie-name">3 plots for sale</div>
-              <div class="price">1.50/cent</div>
+              <div class="popertie-name"><?php echo $row['pname']; ?></div>
+              <div class="price"><?php echo $row['price']; ?></div>
               <p class="description">
-                3 plots for sale each plot 15 cents, location sulthan bathery kenichira pulpally road asking price 1.50 per cent, negotiable
+              <?php echo strip_tags(limitWords($row['txt'], 50)); ?>
               </p>
-              <a href="" class="share"><lord-icon
+              <a href="whatsapp://send?text=Check out this link: <?php echo $table; ?>/<?php echo $row['url']; ?>" target="_blank" rel="noopener noreferrer" class="share"><lord-icon
                 src="https://cdn.lordicon.com/boyoxams.json"
                 trigger="hover"
                 style="width:90%;height:90%">
             </lord-icon></a>
             </div>
             <div class="card-footer">
-              <div class="name">unknown</div>
+              <div class="name"><?php echo $row['name']; ?></div>
               <div class="buttons">
-                <a href="" class="call">Call Now</a>
+                <a href="tel:<?php echo $row['phone']; ?>" class="call">Call Now</a>
               </div>
             </div>
           </div>
         </div>
+        <?php 
+                }
+              }
+        ?>
+
+        <?php
+        $table ='house';
+        $sql ="SELECT * FROM  $table ORDER BY id DESC";
+              $result =$mysqli->query($sql);
+              if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                $imageFilenames = explode(',', $row['images']);
+                $firstImage = trim($imageFilenames[0]);
+                $imagePath = "dashboard/gallery/$table/" . $firstImage;
+        ?>
 
         <div class="slide">
-          <div class="card" onclick="window.location.href='property'">
-            <div class="img-div"><img src="test-img-5.jpg" alt=""> <div class="place"><i class="fa-solid fa-location-dot"></i> Wayanad</div></div>
+          <div class="card" onclick="window.location.href='properties/<?php echo $table; ?>/<?php echo $row['url']; ?>'">
+            <div class="img-div"><img src="<?php echo $imagePath; ?>" alt=""> <div class="place"><i class="fa-solid fa-location-dot"></i> <?php echo $row['place']; ?></div></div>
             <div class="card-body">
-              <div class="popertie-name">3 plots for sale</div>
-              <div class="price">1.50/cent</div>
+              <div class="popertie-name"><?php echo $row['pname']; ?></div>
+              <div class="price"><?php echo $row['price']; ?></div>
               <p class="description">
-                3 plots for sale each plot 15 cents, location sulthan bathery kenichira pulpally road asking price 1.50 per cent, negotiable
+              <?php echo strip_tags(limitWords($row['txt'], 50)); ?>
               </p>
-              <a href="" class="share"><lord-icon
+              <a href="whatsapp://send?text=Check out this link: <?php echo $table; ?>/<?php echo $row['url']; ?>" target="_blank" rel="noopener noreferrer" class="share"><lord-icon
                 src="https://cdn.lordicon.com/boyoxams.json"
                 trigger="hover"
                 style="width:90%;height:90%">
             </lord-icon></a>
             </div>
             <div class="card-footer">
-              <div class="name">unknown</div>
+              <div class="name"><?php echo $row['name']; ?></div>
               <div class="buttons">
-                <a href="" class="call">Call Now</a>
+                <a href="tel:<?php echo $row['phone']; ?>" class="call">Call Now</a>
               </div>
             </div>
           </div>
         </div>
+        <?php 
+                }
+              }
+        ?>
+
+
+        <?php
+        $table ='small_plot';
+        $sql ="SELECT * FROM  $table ORDER BY id DESC";
+              $result =$mysqli->query($sql);
+              if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                $imageFilenames = explode(',', $row['images']);
+                $firstImage = trim($imageFilenames[0]);
+                $imagePath = "dashboard/gallery/$table/" . $firstImage;
+        ?>
 
         <div class="slide">
-          <div class="card" onclick="window.location.href='property'">
-            <div class="img-div"><img src="test-img-4.jpg" alt=""> <div class="place"><i class="fa-solid fa-location-dot"></i> Wayanad</div></div>
+          <div class="card" onclick="window.location.href='properties/<?php echo $table; ?>/<?php echo $row['url']; ?>'">
+            <div class="img-div"><img src="<?php echo $imagePath; ?>" alt=""> <div class="place"><i class="fa-solid fa-location-dot"></i> <?php echo $row['place']; ?></div></div>
             <div class="card-body">
-              <div class="popertie-name">3 plots for sale</div>
-              <div class="price">1.50/cent</div>
+              <div class="popertie-name"><?php echo $row['pname']; ?></div>
+              <div class="price"><?php echo $row['price']; ?></div>
               <p class="description">
-                3 plots for sale each plot 15 cents, location sulthan bathery kenichira pulpally road asking price 1.50 per cent, negotiable
+              <?php echo strip_tags(limitWords($row['txt'], 50)); ?>
               </p>
-              <a href="" class="share"><lord-icon
+              <a href="whatsapp://send?text=Check out this link: <?php echo $table; ?>/<?php echo $row['url']; ?>" target="_blank" rel="noopener noreferrer" class="share"><lord-icon
                 src="https://cdn.lordicon.com/boyoxams.json"
                 trigger="hover"
                 style="width:90%;height:90%">
             </lord-icon></a>
             </div>
             <div class="card-footer">
-              <div class="name">unknown</div>
+              <div class="name"><?php echo $row['name']; ?></div>
               <div class="buttons">
-                <a href="" class="call">Call Now</a>
+                <a href="tel:<?php echo $row['phone']; ?>" class="call">Call Now</a>
               </div>
             </div>
           </div>
         </div>
+        <?php 
+                }
+              }
+        ?>
 
-        <div class="slide">
-          <div class="card" onclick="window.location.href='property'">
-            <div class="img-div"><img src="test-img-3.jpg" alt=""> <div class="place"><i class="fa-solid fa-location-dot"></i> Wayanad</div></div>
-            <div class="card-body">
-              <div class="popertie-name">3 plots for sale</div>
-              <div class="price">1.50/cent</div>
-              <p class="description">
-                3 plots for sale each plot 15 cents, location sulthan bathery kenichira pulpally road asking price 1.50 per cent, negotiable
-              </p>
-              <a href="" class="share"><lord-icon
-                src="https://cdn.lordicon.com/boyoxams.json"
-                trigger="hover"
-                style="width:90%;height:90%">
-            </lord-icon></a>
-            </div>
-            <div class="card-footer">
-              <div class="name">unknown</div>
-              <div class="buttons">
-                <a href="" class="call">Call Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="slide">
-          <div class="card" onclick="window.location.href='property'">
-            <div class="img-div"><img src="test-img-2.jpg" alt=""> <div class="place"><i class="fa-solid fa-location-dot"></i> Wayanad</div></div>
-            <div class="card-body">
-              <div class="popertie-name">3 plots for sale</div>
-              <div class="price">1.50/cent</div>
-              <p class="description">
-                3 plots for sale each plot 15 cents, location sulthan bathery kenichira pulpally road asking price 1.50 per cent, negotiable
-              </p>
-              <a href="" class="share"><lord-icon
-                src="https://cdn.lordicon.com/boyoxams.json"
-                trigger="hover"
-                style="width:90%;height:90%">
-            </lord-icon></a>
-            </div>
-            <div class="card-footer">
-              <div class="name">unknown</div>
-              <div class="buttons">
-                <a href="" class="call">Call Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
+        
         
 
         
              </section>
     </section>
+    <?php
+// Function to limit words in a string
+function limitWords($string, $word_limit) {
+    $words = explode(" ", $string);
+    return implode(" ", array_splice($words, 0, $word_limit));
+}
+?>
     </div>
   </div>
   <div class="dark-layer"></div>
@@ -333,10 +343,7 @@ $(document).ready(function(){
     <script src="assets/js/script.js"></script>
     <script src="assets/js/footer.js"></script>
     
-  <!-- animate on card -->
-  <script>
-    testung
-  </script>
+  
     <!-- bootstrap 5 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>

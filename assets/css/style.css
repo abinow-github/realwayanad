@@ -310,7 +310,7 @@ header .banner{
   }
   .logo-sldr .slick-track{
     display: flex !important;
-    align-items: center;
+    align-items: flex-start;
   }
   .section-1-2 .slick-slide img {
       width: 100%;
@@ -463,6 +463,10 @@ header .banner{
     .description{
       color: rgba(41, 36, 36, 0.574);
       font-size: 12px;
+      display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
     }
     .share{
       position: absolute;
