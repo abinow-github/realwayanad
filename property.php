@@ -156,7 +156,7 @@ $_SESSION['prev_url'] = $prevUrl;
                     </ul>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="<?php echo BASE_URL; ?>/contact">Contact</a>
+                    <a class="nav-link" href="<?php echo BASE_URL; ?>/contact-us">Contact</a>
                   </li>
                 </ul>
               </div>
@@ -237,13 +237,13 @@ $_SESSION['prev_url'] = $prevUrl;
               src="https://cdn.lordicon.com/hrjifpbq.json"
               trigger="hover"
               style="height:20px">
-          </lord-icon><?php echo $query_data['name']?></div>
+          </lord-icon><?php echo $query_data['phone']?></div>
             <a href="tel:<?php echo $query_data['phone']?>" class="call"><lord-icon
               src="https://cdn.lordicon.com/srsgifqc.json"
               trigger="hover"
               style="height:20px">
           </lord-icon> <?php echo $query_data['phone']?></a>
-            <a href="mail.to:<?php echo $query_data['name']?>" class="mail icon-hover"><lord-icon
+            <a href="mail.to:<?php echo $query_data['mail']?>" class="mail icon-hover"><lord-icon
               src="https://cdn.lordicon.com/xtzvywzp.json"
               trigger="hover"
               style="height:20px">
@@ -302,6 +302,26 @@ $_SESSION['prev_url'] = $prevUrl;
 
                 <li class="c-nav-tool_item">
                   <a href="<?php echo BASE_URL; ?>/properties/house" class="c-link">house</a>
+                </li>
+
+                
+
+                
+              </ul>
+            </nav>
+
+          </div>
+          <div class="layout_item w-25">
+            <nav class="c-nav-tool">
+              <h4 class="c-nav-tool_title">Contact</h4>
+              <ul class="c-nav-tool_list">
+
+                <li class="c-nav-tool_item">
+                  <a  class="c-link">nivedhya arcade,near noornal church, Ooty road ,chunkam sulthan bathery - 673592</a>
+                </li>
+
+                <li class="c-nav-tool_item">
+                  <a href="tel:9544287507" class="c-link">9544287507</a>
                 </li>
 
                 
@@ -411,6 +431,13 @@ $_SESSION['prev_url'] = $prevUrl;
     }
     // ]]>
 </script>
+  <!-- call button and whatsapp -->
+  <a class="wts-icn" href="https:/wa.me:9544287507">
+    <i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i>
+  </a>
+  <a class="cal-icn" href="tel:9544287507">
+    <i class="fa-solid fa-phone" style="color: #ffffff;"></i>
+  </a>
    
 <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

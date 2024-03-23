@@ -73,7 +73,7 @@ $table = str_replace('-', '_', $thirdWord);
                     </ul>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="<?php echo BASE_URL; ?>contact">Contact</a>
+                    <a class="nav-link" href="<?php echo BASE_URL; ?>contact-us">Contact</a>
                   </li>
                 </ul>
               </div>
@@ -295,6 +295,26 @@ $table = str_replace('-', '_', $thirdWord);
             </nav>
 
           </div>
+          <div class="layout_item w-25">
+            <nav class="c-nav-tool">
+              <h4 class="c-nav-tool_title">Contact</h4>
+              <ul class="c-nav-tool_list">
+
+                <li class="c-nav-tool_item">
+                  <a  class="c-link">nivedhya arcade,near noornal church, Ooty road ,chunkam sulthan bathery - 673592</a>
+                </li>
+
+                <li class="c-nav-tool_item">
+                  <a href="tel:9544287507" class="c-link">9544287507</a>
+                </li>
+
+                
+
+                
+              </ul>
+            </nav>
+
+          </div>
         </div>
         <div class="layout c-2">
           <div class="layout_item w-50">
@@ -345,7 +365,13 @@ $table = str_replace('-', '_', $thirdWord);
   </div>
 </footer>
 <script src="<?php echo BASE_URL; ?>/assets/js/script.js"></script>
-
+  <!-- call button and whatsapp -->
+  <a class="wts-icn" href="https:/wa.me:9544287507">
+    <i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i>
+  </a>
+  <a class="cal-icn" href="tel:9544287507">
+    <i class="fa-solid fa-phone" style="color: #ffffff;"></i>
+  </a>
     <!-- bootstrap 5 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>

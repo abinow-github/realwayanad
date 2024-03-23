@@ -540,3 +540,50 @@ body {
     width: 25%;
   }
 }
+
+
+
+
+/* whatsapp and call button */
+.wts-icn,.cal-icn{
+  position: fixed;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.wts-icn{
+  bottom: 100px;
+  transform: translateY(50px);
+  transition: 0.5s;
+  opacity: 0;
+  
+  right: 20px;
+  background-color: rgb(48, 186, 48);
+}
+.wts-icn i{
+  font-size: 35px;
+}
+.wts-icn.wts-actv{
+  opacity: 1;
+  transform: translateY(0);
+}
+.cal-icn{
+  bottom: 40px;
+  transform: translateY(15px);
+  transition: 0.5s;
+  opacity: 0;
+  right: 20px;
+ 
+  background-color: var(--primary-color);
+}
+.cal-icn i{
+  font-size: 24px;
+}
+.cal-icn.cal-actv{
+  opacity: 1;
+  transform: translateY(0);
+}
