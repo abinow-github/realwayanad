@@ -216,7 +216,7 @@ $table = str_replace('-', '_', $thirdWord);
                     <div class="popertie-name"><?php echo $row['pname']; ?></div>
                     <div class="price"><?php echo $row['price']; ?></div>
                     <p class="description">
-                      3 plots for sale each plot 15 cents, location sulthan bathery kenichira pulpally road asking price 1.50 per cent, negotiable
+                    <?php echo limitWords(strip_tags($row['txt']), 50); ?>
                     </p>
                     <a href="whatsapp://send?text=Check out this link: <?php echo $table; ?>/<?php echo $row['url']; ?>" target="_blank" rel="noopener noreferrer" class="share"><lord-icon
                       src="https://cdn.lordicon.com/boyoxams.json"
@@ -235,7 +235,14 @@ $table = str_replace('-', '_', $thirdWord);
             </div>
             <?php 
                 }
-            }?>
+            }
+            // Function to limit words in a string
+function limitWords($string, $word_limit)
+{
+    $words = explode(" ", $string);
+    return implode(" ", array_splice($words, 0, $word_limit));
+}
+            ?>
 
             
             

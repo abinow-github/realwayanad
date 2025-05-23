@@ -31,12 +31,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
     if (empty($url)) {
-        $url=$pname;
+        $url = $pname;
     }
     $url = preg_replace('/[^a-zA-Z0-9\-]/', '', $url);
     $url = str_replace(' ', '-', $url);
     if (empty($phone)) {
-        $phone='+971507611980';
+        $phone = '+971507611980';
+    }
+
+    // Check if the URL already exists in the database
+    $originalUrl = $url;
+    $counter = 1;
+    while (true) {
+        $urlQuery = "SELECT COUNT(*) as count FROM small_plot WHERE url = '$url'";
+        $result = $mysqli->query($urlQuery);
+        $row = $result->fetch_assoc();
+
+        if ($row['count'] == 0) {
+            break;
+        } else {
+            $url = $originalUrl . '-' . $counter;
+            $counter++;
+        }
     }
 
     $uploadDirectory = "../gallery/small_plot/";
@@ -52,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Check file size (1MB limit)
         $maxFileSize = 1 * 1024 * 1024; // 1MB in bytes
         if ($fileSize > $maxFileSize) { 
-            $_SESSION['upload_error'] = " File '{$fileName}'  exceeds the maximum allowed size (1MB).";
+            $_SESSION['upload_error'] = " File '{$fileName}' exceeds the maximum allowed size (1MB).";
             header("Location: index.php"); // Redirect back to index page
             exit();
         }
@@ -74,7 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $imagePaths = implode(',', $uploadedFiles);
 
     // Insert data into the news table
-    $insertQuery = "INSERT INTO small_plot (images, pname, name, price, mail, place, url, phone,txt)
+    $insertQuery = "INSERT INTO small_plot (images, pname, name, price, mail, place, url, phone, txt)
                       VALUES ('$imagePaths','$pname', '$name', '$price', '$mail', '$place','$url' , '$phone','$txt')";
     $result = $mysqli->query($insertQuery);
 
